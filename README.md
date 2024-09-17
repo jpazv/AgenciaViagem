@@ -115,7 +115,7 @@ Ao escolher a opção **2** no menu principal, o sistema redireciona o usuário 
 
 1. **Clone o repositório**:
    ```bash
-   git clone <url_do_repositorio>
+   git clone github.com/jpazv/AgenciaViagemAV1
    ```
 
 2. **Compile o código**:
