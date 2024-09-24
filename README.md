@@ -1,69 +1,85 @@
 
 # Sistema de Gerenciamento de Agência de Viagens
 
-Este sistema foi desenvolvido para gerenciar turistas, pacotes de viagem e pagamentos em uma agência de viagens. Ele oferece funcionalidades para cadastrar, atualizar, remover e listar turistas, pacotes de viagem e pagamentos, facilitando o dia a dia dos funcionários da agência.
+Este sistema foi desenvolvido em **Java** para gerenciar turistas, pacotes de viagem e pagamentos em uma agência de viagens. Ele permite que dois tipos de usuários, **Funcionários** e **Turistas**, interajam com o sistema para realizar operações de gerenciamento e compra de pacotes de viagem.
 
-## Funcionalidades Principais
+## Funcionalidades
 
-1. **Gerenciamento de Turistas**: Cadastro, consulta, atualização e remoção de turistas.
-2. **Gerenciamento de Pacotes de Viagem**: Associar pacotes de viagem a turistas e gerenciar os detalhes de cada pacote.
-3. **Gerenciamento de Pagamentos**: Registro e consulta de pagamentos feitos pelos turistas, categorizando-os entre pagos e pendentes.
+### Para Funcionários:
+- **Gerenciamento de Turistas**: Cadastrar, atualizar, listar e remover turistas.
+- **Gerenciamento de Pacotes de Viagem**: Associar pacotes a turistas, listar, atualizar e remover pacotes.
+- **Gerenciamento de Pagamentos**: Listar pagamentos pendentes e concluídos, associar pagamentos a turistas, e registrar novos pagamentos.
+
+### Para Turistas:
+- **Login e Cadastro**: Criação de conta com login e senha, opção de recuperação de senha.
+- **Compra de Pacotes de Viagem**: Visualizar pacotes de viagem disponíveis, escolher e comprar pacotes.
+- **Criação de Pacotes Personalizados**: Criar pacotes personalizados com destino, duração e nível de serviço, com preço calculado dinamicamente.
+- **Listar Minhas Viagens**: Ver todos os pacotes que já foram adquiridos ou adicionados ao perfil do turista.
+- **Listar Meus Pagamentos**: Verificar pagamentos pendentes e concluídos, exibindo todos os detalhes de cada pagamento.
 
 ---
 
 ## Fluxo de Uso
 
-O fluxo do sistema é organizado através de um menu interativo que permite ao usuário navegar entre as opções de gerenciamento. Abaixo está uma descrição do fluxo de uso do sistema.
+O sistema é baseado em um menu interativo que permite ao usuário navegar pelas opções de forma simples e intuitiva.
 
-### 1. Menu Principal
+### 1. Menu Inicial
 
-Ao iniciar o sistema, o usuário será apresentado ao **Menu Principal**, onde poderá escolher entre as opções:
-
-```
-=== Menu Principal ===
-1. Gerenciar Turistas e Pacotes de Viagem
-2. Gerenciar Pagamentos
-3. Sair
-```
-
-### 2. Gerenciamento de Turistas e Pacotes de Viagem
-
-Ao escolher a opção **1** no menu principal, o sistema redireciona o usuário para o **Menu de Turistas e Pacotes**. Este menu permite o cadastro de novos turistas, a associação de pacotes de viagem, além de operações de consulta, atualização e remoção.
-
-**Exemplo de Menu de Turistas e Pacotes**:
+Ao iniciar o sistema, o usuário será apresentado ao **Menu Inicial**, onde poderá escolher se deseja entrar como **Funcionário** ou **Turista**. Dependendo da escolha, o usuário terá a opção de **cadastrar uma nova conta** ou **entrar com uma conta existente**.
 
 ```
-=== Gerenciar Turistas e Pacotes de Viagem ===
-1. Cadastrar Turista e Pacote de Viagem
-2. Listar Turistas e Pacotes
-3. Atualizar Turista ou Pacote
+=== Menu Inicial ===
+1. Login como Funcionário
+2. Criar Conta de Turista
+3. Login como Turista
+4. Sair
+```
+
+### 2. Menu de Funcionários
+
+Após o login, o funcionário terá acesso ao **Menu de Funcionários** para gerenciar turistas, pacotes e pagamentos. As opções incluem:
+
+```
+=== Menu Funcionário ===
+1. Gerenciar Turistas
+2. Gerenciar Pacotes de Viagem
+3. Gerenciar Pagamentos
+4. Sair
+```
+
+#### Gerenciamento de Turistas e Pacotes
+
+O funcionário pode adicionar, listar, atualizar e remover turistas, além de associar pacotes de viagem a turistas.
+
+```
+=== Gerenciar Turistas ===
+1. Cadastrar Turista
+2. Listar Turistas
+3. Atualizar Turista
 4. Remover Turista
+5. Voltar ao Menu Funcionário
+```
+
+### 3. Menu de Turistas
+
+Após o login, o turista terá acesso ao **Menu de Turistas** onde poderá visualizar pacotes, criar pacotes personalizados, e gerenciar suas viagens e pagamentos.
+
+```
+=== Menu do Cliente ===
+1. Visualizar Pacotes Existentes e Comprar
+2. Criar Pacote Personalizado e Comprar
+3. Listar Minhas Viagens
+4. Listar Meus Pagamentos
 5. Voltar ao Menu Principal
 ```
 
-#### Fluxo de Cadastro de Turista e Pacote
+#### Compra de Pacotes
 
-1. Escolha a opção **1** para cadastrar um novo turista.
-2. Insira os dados do turista (nome, CPF, email, telefone e endereço).
-3. Em seguida, será solicitado o cadastro do pacote de viagem, com os seguintes dados:
-   - Tipo do pacote (Nacional ou Internacional)
-   - Destino
-   - Duração (em dias)
-   - Nível do pacote (Completo, Luxo ou Standard)
+O turista pode visualizar os pacotes de viagem disponíveis e optar por comprá-los. Há também a opção de criar um **pacote personalizado**, onde ele poderá especificar destino, duração e nível de serviço. O sistema calculará o preço com base nessas informações.
 
-### 3. Gerenciamento de Pagamentos
+#### Gerenciamento de Pagamentos
 
-Ao escolher a opção **2** no menu principal, o sistema redireciona o usuário para o **Menu de Pagamentos**. Este menu permite o registro e consulta de pagamentos, separando entre pagos e pendentes.
-
-**Exemplo de Menu de Pagamentos**:
-
-```
-=== Gerenciar Pagamentos ===
-1. Registrar Novo Pagamento
-2. Listar Pagamentos Pendentes
-3. Listar Pagamentos Concluídos
-4. Voltar ao Menu Principal
-```
+Os turistas podem listar seus pagamentos pendentes e concluídos diretamente no menu. O sistema exibe todos os detalhes de cada pagamento, como valor, data e status (pago ou pendente).
 
 ---
 
@@ -105,7 +121,9 @@ java -cp bin AgenciaViagemMenu
 
 ## Estrutura de Dados
 
-O sistema armazena as informações principais sobre **Turistas**, **Pacotes de Viagem**, e **Pagamentos**. Abaixo estão as principais entidades e seus atributos:
+O sistema armazena as informações principais sobre **Funcionários**, **Turistas**, **Pacotes de Viagem** e **Pagamentos**.
+
+### Entidades
 
 - **Turista**:
   - ID
@@ -114,6 +132,15 @@ O sistema armazena as informações principais sobre **Turistas**, **Pacotes de 
   - Email
   - Telefone
   - Endereço
+  - Login
+  - Senha
+  - Lista de Pacotes
+  - Lista de Pagamentos
+
+- **Funcionário**:
+  - Nome
+  - Login
+  - Senha
 
 - **Pacote de Viagem**:
   - ID
