@@ -8,13 +8,11 @@ public class FuncionarioController {
         this.funcionarios = new ArrayList<>();
     }
 
-    // Adicionar funcionário
     public void adicionarFuncionario(Funcionario funcionario) {
         funcionarios.add(funcionario);
         System.out.println("Funcionário adicionado com sucesso!");
     }
 
-    // Buscar funcionário por login
     public Funcionario buscarFuncionarioPorLogin(String login) {
         for (Funcionario funcionario : funcionarios) {
             if (funcionario.getLogin().equalsIgnoreCase(login)) {
@@ -25,7 +23,6 @@ public class FuncionarioController {
         return null;
     }
 
-    // Atualizar senha de funcionário
     public void atualizarSenhaFuncionario(String login, String novaSenha) {
         Funcionario funcionario = buscarFuncionarioPorLogin(login);
         if (funcionario != null) {
@@ -36,7 +33,6 @@ public class FuncionarioController {
         }
     }
 
-    // Remover funcionário
     public void removerFuncionario(String login) {
         Funcionario funcionario = buscarFuncionarioPorLogin(login);
         if (funcionario != null) {
@@ -47,7 +43,6 @@ public class FuncionarioController {
         }
     }
 
-    // Retornar lista de funcionários
     public List<Funcionario> getFuncionarios() {
         return funcionarios;
     }

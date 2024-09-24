@@ -39,12 +39,11 @@ public class MenuPrincipal {
                 }
             } catch (Exception e) {
                 System.out.println("Erro: " + e.getMessage());
-                scanner.nextLine();  // Consumir a entrada inválida
+                scanner.nextLine();
             }
         }
     }
 
-    // Menu para escolher entre cadastrar ou entrar como funcionário
     private void menuFuncionario() {
         boolean voltar = false;
         while (!voltar) {
@@ -78,7 +77,7 @@ public class MenuPrincipal {
         }
     }
 
-    // Menu para escolher entre cadastrar ou entrar como turista
+
     private void menuTurista() {
         boolean voltar = false;
         while (!voltar) {
@@ -112,7 +111,6 @@ public class MenuPrincipal {
         }
     }
 
-    // Cadastro de Funcionário
     private void cadastrarFuncionario() {
         System.out.println("\n=== Cadastrar Funcionário ===");
         System.out.print("Digite o nome: ");
@@ -128,7 +126,6 @@ public class MenuPrincipal {
         System.out.println("Funcionário cadastrado com sucesso!");
     }
 
-    // Login de Funcionário
     private void loginFuncionario() {
         System.out.println("\n=== Login de Funcionário ===");
         System.out.print("Digite seu login: ");
@@ -164,7 +161,7 @@ public class MenuPrincipal {
         System.out.println("Você excedeu o número de tentativas. Tente novamente mais tarde.");
     }
 
-    // Cadastro de Turista
+
     private void cadastrarTurista() {
         System.out.println("\n=== Cadastrar Turista ===");
         System.out.print("Digite o nome: ");
@@ -189,7 +186,7 @@ public class MenuPrincipal {
         System.out.println("Conta de turista criada com sucesso!");
     }
 
-    // Login de Turista
+
     private void loginTurista() {
         System.out.println("\n=== Login de Turista ===");
         System.out.print("Digite seu login: ");

@@ -1,6 +1,5 @@
 public class PacoteViagemFactory {
 
-    // Criação de pacotes de viagem com base no tipo
     public static PacoteViagem criarPacote(String tipoPacote, String destino, int duracao, String nivel) {
         switch (tipoPacote.toLowerCase()) {
             case "nacional":

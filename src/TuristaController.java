@@ -11,7 +11,6 @@ public class TuristaController {
         inicializarPacotes();
     }
 
-    // Inicializa pacotes predefinidos
     private void inicializarPacotes() {
         PacoteViagem pacote1 = PacoteViagemFactory.criarPacote("Nacional", "Foz do Iguaçu", 7, "Completo");
         PacoteViagem pacote2 = PacoteViagemFactory.criarPacote("Internacional", "Paris", 10, "Luxo");
@@ -24,18 +23,15 @@ public class TuristaController {
         pacotesDisponiveis.add(pacote4);
     }
 
-    // Retorna a lista de pacotes disponíveis
     public List<PacoteViagem> getPacotesDisponiveis() {
         return pacotesDisponiveis;
     }
 
-    // Adicionar turista
     public void adicionarTurista(Turista turista) {
         turistas.add(turista);
         System.out.println("Turista adicionado com sucesso!");
     }
 
-    // Buscar turista por nome
     public Turista buscarTuristaPorNome(String nome) {
         for (Turista turista : turistas) {
             if (turista.getNome().equalsIgnoreCase(nome)) {
@@ -46,7 +42,6 @@ public class TuristaController {
         return null;
     }
 
-    // Buscar turista por login (novo método)
     public Turista buscarTuristaPorLogin(String login) {
         for (Turista turista : turistas) {
             if (turista.getLogin().equalsIgnoreCase(login)) {
@@ -57,7 +52,6 @@ public class TuristaController {
         return null;
     }
 
-    // Atualizar senha do turista
     public void atualizarSenhaTurista(String login, String novaSenha) {
         Turista turista = buscarTuristaPorLogin(login);
         if (turista != null) {
@@ -68,7 +62,6 @@ public class TuristaController {
         }
     }
 
-    // Remover pagamento de um turista
     public void removerPagamentoDoTurista(int idTurista, int idPagamento) {
         Turista turista = buscarTuristaPorId(idTurista);
         if (turista != null) {
@@ -90,7 +83,6 @@ public class TuristaController {
         }
     }
 
-    // Buscar turista por ID
     public Turista buscarTuristaPorId(int id) {
         for (Turista turista : turistas) {
             if (turista.getId() == id) {
@@ -100,7 +92,6 @@ public class TuristaController {
         return null;
     }
 
-    // Remover turista pelo ID
     public void removerTurista(int id) {
         Turista turistaARemover = buscarTuristaPorId(id);
         if (turistaARemover != null) {
@@ -111,7 +102,6 @@ public class TuristaController {
         }
     }
 
-    // Retorna a lista de turistas
     public List<Turista> getTuristas() {
         return turistas;
     }

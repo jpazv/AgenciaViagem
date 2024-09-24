@@ -105,11 +105,11 @@ public class MenuPagamentos {
         System.out.println("3. Pix");
         System.out.print("Escolha uma opção: ");
         int opcaoForma = scanner.nextInt();
-        scanner.nextLine();  // Consumir a quebra de linha
+        scanner.nextLine();
 
         String formaPagamento = escolherFormaPagamento(opcaoForma);
 
-        // Criar pagamento e associar ao turista
+
         Pagamento pagamento = new Pagamento(valor, dataPagamento, status, formaPagamento);
         turista.adicionarPagamento(pagamento);
         System.out.println("Pagamento cadastrado com sucesso!\n");
@@ -119,7 +119,7 @@ public class MenuPagamentos {
     private void listarPagamentosPendentes() {
         System.out.println("\n=== Lista de Pagamentos Pendentes ===");
 
-        boolean encontrouPagamentos = false; // Variável para verificar se há pagamentos pendentes
+        boolean encontrouPagamentos = false;
 
         for (Turista turista : turistaController.getTuristas()) {
             for (Pagamento pagamento : turista.getPagamentos()) {
@@ -172,7 +172,7 @@ public class MenuPagamentos {
 
         System.out.print("Digite o ID do pagamento que deseja remover: ");
         int idPagamento = scanner.nextInt();
-        scanner.nextLine();  // Consumir a quebra de linha
+        scanner.nextLine();
 
         turistaController.removerPagamentoDoTurista(turista.getId(), idPagamento);
     }

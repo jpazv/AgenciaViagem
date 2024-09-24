@@ -3,7 +3,7 @@ import java.util.List;
 
 public class PagamentoController {
 
-    // Gerenciamento de pagamentos pendentes e pagos
+
     public List<Pagamento> listarPagamentosPendentes(Turista turista) {
         List<Pagamento> pendentes = new ArrayList<>();
         for (Pagamento pagamento : turista.getPagamentos()) {
@@ -23,6 +23,4 @@ public class PagamentoController {
         }
         return concluidos;
     }
-
-    // Métodos de adicionar, atualizar e remover são manipulados dentro do contexto do TuristaController
 }

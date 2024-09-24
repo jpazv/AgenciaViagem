@@ -2,15 +2,15 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Pagamento {
-    private int id; // ID único para cada pagamento
-    private double valor; // Valor do pagamento
-    private LocalDate dataPagamento; // Data do pagamento
-    private String status; // Status do pagamento (pago/pendente)
-    private String formaPagamento; // Forma de pagamento (cartão de crédito, boleto, etc.)
+    private int id;
+    private double valor;
+    private LocalDate dataPagamento;
+    private String status;
+    private String formaPagamento;
 
-    private static int idCounter = 1; // Contador para gerar IDs únicos
+    private static int idCounter = 1;
 
-    // Construtor
+
     public Pagamento(double valor ,LocalDate dataPagamento,  String status, String formaPagamento) {
         this.id = idCounter++;
         this.valor = valor;

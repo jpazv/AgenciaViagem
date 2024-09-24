@@ -11,11 +11,11 @@ public class Turista {
     private String login;
     private String senha;
     private List<PacoteViagem> pacotes;
-    private List<Pagamento> pagamentos; // Adicionando lista de pagamentos
+    private List<Pagamento> pagamentos;
 
-    private static int idCounter = 1; // Contador para gerar IDs únicos
+    private static int idCounter = 1;
 
-    // Construtor
+
     public Turista(String nome, String cpf, String email, int telefone, String endereco, String login, String senha) {
         this.id = idCounter++;
         this.nome = nome;
@@ -29,12 +29,10 @@ public class Turista {
         this.pagamentos = new ArrayList<>(); // Inicializar a lista de pagamentos
     }
 
-    // Métodos para adicionar e remover pacotes
     public void adicionarPacote(PacoteViagem pacote) {
         pacotes.add(pacote);
     }
 
-    // Métodos para adicionar e remover pagamentos
     public void adicionarPagamento(Pagamento pagamento) {
         pagamentos.add(pagamento);
     }
@@ -43,7 +41,7 @@ public class Turista {
         pagamentos.remove(pagamento);
     }
 
-    // Getters e Setters
+
     public int getId() {
         return id;
     }

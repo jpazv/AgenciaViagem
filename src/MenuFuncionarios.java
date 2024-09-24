@@ -48,19 +48,16 @@ public class MenuFuncionarios {
         }
     }
 
-    // Menu para gerenciar turistas
     private void menuTuristas() {
         MenuTuristasPacotes menuTuristas = new MenuTuristasPacotes(turistaController, scanner);
         menuTuristas.exibirMenu();
     }
 
-    // Menu para gerenciar pacotes
     private void menuPacotes() {
         // Aqui, podemos adicionar um CRUD para pacotes de viagem se não estiver no menu de turistas.
         System.out.println("Gerenciamento de pacotes ainda não implementado diretamente.");
     }
 
-    // Menu para gerenciar pagamentos
     private void menuPagamentos() {
         MenuPagamentos menuPagamentos = new MenuPagamentos(turistaController, pagamentoController, scanner);
         menuPagamentos.exibirMenu();

@@ -1,10 +1,10 @@
 public class PacoteViagem {
-    private String tipo; // Pode ser "Nacional" ou "Internacional"
-    private String destino; // Destino do pacote de viagem
-    private int duracao; // Duração em dias
-    private String nivel; // Nível do pacote: "Completo", "Luxo", "Standard"
+    private String tipo;
+    private String destino;
+    private int duracao;
+    private String nivel;
 
-    // Construtor
+
     public PacoteViagem(String tipo, String destino, int duracao, String nivel) {
         this.tipo = tipo;
         this.destino = destino;
@@ -12,7 +12,7 @@ public class PacoteViagem {
         this.nivel = nivel;
     }
 
-    // Getters e Setters
+
     public String getTipo() {
         return tipo;
     }
@@ -45,7 +45,6 @@ public class PacoteViagem {
         this.nivel = nivel;
     }
 
-    // Método para descrever o pacote de viagem
     public String descreverPacote() {
         return "Pacote " + tipo + " para " + destino + " com duração de " + duracao + " dias. Nível: " + nivel;
     }

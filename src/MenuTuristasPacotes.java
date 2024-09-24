@@ -69,7 +69,7 @@ public class MenuTuristasPacotes {
             System.out.println("1. Atualizar informações do Turista");
             System.out.println("2. Atualizar Pacote de Viagem do Turista");
             int escolha = scanner.nextInt();
-            scanner.nextLine();  // Consumir a quebra de linha
+            scanner.nextLine();
 
             switch (escolha) {
                 case 1:
@@ -100,7 +100,7 @@ public class MenuTuristasPacotes {
 
         System.out.print("Digite o novo telefone do turista: ");
         turista.setTelefone(scanner.nextInt());
-        scanner.nextLine();  // Consumir a quebra de linha
+        scanner.nextLine();
 
         System.out.print("Digite o novo endereço do turista: ");
         turista.setEndereco(scanner.nextLine());
@@ -115,7 +115,7 @@ public class MenuTuristasPacotes {
             return;
         }
 
-        PacoteViagem pacote = turista.getPacotes().get(0);  // Supondo que há apenas um pacote por enquanto
+        PacoteViagem pacote = turista.getPacotes().get(0);
         System.out.println("Atualizando pacote: " + pacote.descreverPacote());
 
         System.out.print("Digite o novo destino do pacote: ");
@@ -123,7 +123,7 @@ public class MenuTuristasPacotes {
 
         System.out.print("Digite a nova duração do pacote (em dias): ");
         pacote.setDuracao(scanner.nextInt());
-        scanner.nextLine();  // Consumir a quebra de linha
+        scanner.nextLine();
 
         System.out.print("Digite o novo nível do pacote (Completo/Luxo/Standard): ");
         pacote.setNivel(scanner.nextLine());
